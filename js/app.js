@@ -4,7 +4,14 @@ document.getElementById('tweet').addEventListener('keyup',availableCharacters);
 function showTweet() {
 	document.getElementById('tweets').style.display = 'block';
 	var tweet = document.getElementById('tweet').value;
-	document.getElementById('tweet-content').innerHTML = tweet;	
+	//estas son los nuevos elementos a crear
+	var contenedorTuit = document.createElement('article');
+	//segun el cuadro de inspeccionar, esta variable es la que no esta definida, si era un <p> y para eso se ocupa???
+	var tiut = document.createElement('p');
+	tiut.innerHTML = tweet;
+	// para decirle decirle donde lo va a colocar
+	tuit.appendChild(contenedorTuit);
+	contenedorTuit.appendChild(document.getElementById('tweets'));
 }
 
 function availableCharacters() {
